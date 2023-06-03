@@ -1,5 +1,5 @@
 
-.home-container{
+.main-container{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -19,9 +19,12 @@
     }
   }
   .input_container{
+    p{
+      margin-bottom: 3px!important;
+    }
     select{
       min-width: 200px;
-      padding: 4px 20px;
+      padding: 5px 20px;
     }
   }
   .border-container{

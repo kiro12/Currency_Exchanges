@@ -1,10 +1,11 @@
 
 <div class="header-container">
-  <h1>{{currency[0].key + '-' + currency[0].value}}</h1>
+  <h1 *ngIf="currency">{{currency[0].key + '-' + currency[0].value}}</h1>
   <button class="btn btn-primary" routerLink="/">Back To Home</button>
 </div>
 <app-currecy-exchanger [type]="'about'"></app-currecy-exchanger>
 
+<h3>Historical Rates Charts</h3>
 <div class="historical-container">
   <ngx-charts-bar-vertical-2d
 

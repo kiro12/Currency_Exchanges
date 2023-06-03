@@ -13,10 +13,7 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(): void {
     this.globalService.getSymbols().subscribe((res:any)=>{
-      console.log(res)
       this.globalService.currencies = Object?.keys(res.symbols).map((key) => ({ key, value: res.symbols[key] }))
-      console.log(this.globalService.currencies)
-
     })
   }
 
