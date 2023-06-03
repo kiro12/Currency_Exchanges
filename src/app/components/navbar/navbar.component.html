@@ -1,0 +1,11 @@
+<header class="sticky-header">
+
+  <div class="logo">
+    <!-- Add your logo image or text here -->
+    <img src="assets/images/banquemisr-logo.jpg" alt="Banque Misr Logo">
+  </div>
+  <nav class="nav-links">
+    <a routerLink="/about" [queryParams]="{from:'EUR' , to:'USD'}" routerLinkActive="active">EUR-USD Details</a>
+    <a routerLink="/about" [queryParams]="{from:'EUR' , to:'GBP'}"  routerLinkActive="active">EUR-GBP Details</a>
+  </nav>
+</header>

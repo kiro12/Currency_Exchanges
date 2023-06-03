@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Currency_Exchanges'`, () => {
+  it(`should have as title 'Currency_Exchanger'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Currency_Exchanges');
+    expect(app.title).toEqual('Currency_Exchanger');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Currency_Exchanges app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Currency_Exchanger app is running!');
   });
 });

@@ -1,0 +1,11 @@
+
+
+<h1>Currency Exchanger</h1>
+<app-currecy-exchanger ></app-currecy-exchanger>
+
+<div class="currency-container" *ngIf="(globalService.popularCurrencies | async)?.rates">
+  <div class="currency-card" *ngFor="let item of (globalService.popularCurrencies | async)?.rates">
+   <p> From {{(globalService.popularCurrencies | async)?.base}} to {{item.key}} </p>
+    <p> {{item.value}} </p>
+  </div>
+</div>

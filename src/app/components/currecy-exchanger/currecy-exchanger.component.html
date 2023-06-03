@@ -1,0 +1,39 @@
+<div class="home-container">
+<div class="flex_block">
+  <div class="input_container">
+    <p>Amount</p>
+    <input [(ngModel)]="amount">
+  </div>
+  <div class="border-container">
+    1:00 {{convertedFrom}} = {{rate}} {{convertedTo}}
+  </div>
+</div>
+
+<div class="flex_block">
+  <div class="currency_container">
+    <div class="input_container">
+      <p>From</p>
+      <select  [(ngModel)]="fromCurrency" [disabled]="type !== 'home'">
+        <option *ngFor="let item of globalService.currencies"  [value]="item.key">{{item.key}}</option>
+      </select>
+    </div>
+    <img src="assets/images/double-arrow.png" width="60px" alt="Logo">
+
+    <div class="input_container">
+      <p>To</p>
+      <select  [(ngModel)]="toCurrency">
+        <option *ngFor="let item of globalService.currencies"  [value]="item.key">{{item.key}}</option>
+      </select>
+    </div>
+  </div>
+  <button (click)="convertAmount()" class="btn btn-primary w-100 my-3" [disabled]="!amount || amount == 0">Convert</button>
+  <div class="currency-bottom">
+    <div class="border-container">
+     {{convertedAmount}}
+    </div>
+
+      <button *ngIf="type === 'home' && isConverted" routerLink="/about" [queryParams]="{from:fromCurrency , to:toCurrency , amount}" class="btn btn-primary new_button">Details</button>
+
+  </div>
+</div>
+</div>
